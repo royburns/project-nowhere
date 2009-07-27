@@ -54,7 +54,7 @@ function instheader() {
 
 	echo "<html><head>".
 		"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=$charset\">".
-		"<title>Project Parasy Installer </title>".
+		"<title>Nowhere Microblog Installer</title>".
 		"<link rel=\"stylesheet\" type=\"text/css\" id=\"css\" href=\"installer/style.css\"></head>".
 		"<body>".
 		"<div id=\"main\" align=\"center\"><div id=\"panel\" align=\"left\">".
