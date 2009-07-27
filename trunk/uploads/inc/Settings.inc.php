@@ -24,7 +24,7 @@
 	$webservice_settings = array(
         'twitter'=>'Twitter|http://twitter.com/%1$s',
         'facebook'=>'Facebook|http://facebook.com/%1$s',
-        'lastfm'=>'Last.fm|http://cn.last.fm/%1$s',
+        'lastfm'=>'Last.fm|http://cn.last.fm/user/%1$s',
         'bangumi'=>'Bangumi 番组计划|http://chii.in/user/%1$s',
         'dianping'=>'大众点评网|http://www.dianping.com/member/%1$s',
         'dango'=>'Dango 美食分享|http://hoto.cn/people/%1$s',
