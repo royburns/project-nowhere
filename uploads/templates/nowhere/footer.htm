@@ -1,0 +1,40 @@
+</div>
+
+<div id="footer"><small>$copyright <br />Powered by <a href="http://code.google.com/p/project-nowhere/" class="white">Nowhere</a> Personal Edition {NW_VERSION}</small>
+<!--{if $adminid == 1}-->
+<br />
+<small><!--{if GlobalCore::debuginfo()}-->
+Processed in $debuginfo[time] second(s), $debuginfo[queries] queries<!--{if $gzipcompress}-->, Gzip enabled<!--{/if}--></small>
+<!--{if $adminid == 1 && DEBUG_DETAIL && $debuginfo[detail]}-->
+<div align="right">
+<ul  id="process">
+	<!--{loop $debuginfo[detail] $sql_detail}-->
+	<!--{eval $sql['bg'] = $bg = isset($bg) && $bg == 'odd' ? 'even' : 'odd';}-->
+	<li class="$sql['bg']">$sql_detail</li>
+	<!--{/loop}-->
+</ul>
+</div>
+<!--{/if}-->
+
+<!--{/if}-->
+<!--{/if}-->
+</div>
+</body></html>
+<script type="text/javascript" src="{NWDIR}/js/jquery.js"></script>
+<script type="text/javascript" src="{NWDIR}/js/common.js"></script>
+<!--{if $_init['js']}-->
+<script type="text/javascript">
+nwlib.$_init['js'].init();
+</script>
+<!--{/if}-->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-4049707-5");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+{eval GlobalCore::updatesession();}
+{eval GlobalCore::output();}

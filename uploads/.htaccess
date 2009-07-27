@@ -1,0 +1,9 @@
+RewriteEngine On
+
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
+#RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-d
+RewriteRule ^.*$ router.php [L]
+
+
+RewriteCond %{REQUEST_URI} !^(.*)installer.php
+RewriteRule ^.*\.php$ router.php [L]

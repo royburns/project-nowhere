@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=$charset" />
+<title><!--{if $navtitle}-->$navtitle<!--{else}-->$sitename<!--{/if}--></title>
+<meta name="keywords" content="$keywords" />
+<meta name="description" content="$site_intro" />
+$extrahead
+
+<!--[if lte IE 6]>
+<script type="text/javascript" src="{NWDIR}/js/pngfixed.js"></script>
+<script>
+  DD_belatedPNG.fix('.png_bg,.top_border,.columns,.odd,.even,#bean_top,img');
+</script>
+<![endif]-->
+
+<link rel="stylesheet" type="text/css" href="{NWDIR}/css/reset.css" />
+<link rel="stylesheet" type="text/css" href="{NWDIR}/css/layout.css" />
+
+$_feed
+<script type="text/javascript">var NWDIR = '{NWDIR}';</script>
+</head>
+<body>
+<div id="wrapper">
+    <div id="top" class="clearit">
+        <div class="badge">
+            <a href="{NWDIR}"><img src="$avatar" class="ll" /></a>
+            <!--{if $avatar}--><a href="{NWDIR}/feed" title="{lang rss}"><img src="{NWDIR}/img/rss_orange.png" alt="feed" class="rr" /></a><!--{/if}-->
+            <h1><a href="{NWDIR}">$sitename</a></h1>
+             <div class="inner ll">
+                <div><span class="tip">$custom_link</span></div>
+                <!--{if $nw_uid}--><span class="tip"><a href="{NWDIR}/settings">{lang settings}</a> | <a href="{NWDIR}/output">{lang output}</a> | <a href="{NWDIR}/logout/{FORMHASH}">{lang logout}</a></span><!--{else}--><a href="{NWDIR}/login">{lang login}</a><!--{/if}-->
+            </div>
+        </div>
+    </div>
+    <div class="top_border"></div>

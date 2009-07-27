@@ -1,0 +1,19 @@
+{subtemplate header}
+
+<div class="columns clearit">
+<div id="columnSingle" class="column">
+         <h2 class="title">{lang login_in} $sitename</h2>
+		<form  id="loginForm" method="post" name="login" action="{NWDIR}/login">
+		<input type="hidden" name="formhash" value="{FORMHASH}">
+		<input type="hidden" name="referer" value="$referer">
+		<span class="text" style="line-height:200%">{lang your_id}<br />
+		<input id="email" name="email" class="inputtext" type="text" /><br />
+		{lang your_password}<br />
+		<input id="password" name="password" class="inputtext" type="password"><br />
+		<input class="checkbox" name="cookietime" value="0" type="checkbox"> {lang no_save_cookies}<br />
+		</span>
+		<input class="inputBtn" type="submit" name="loginsubmit" value="{lang login}" />
+		</form>
+</div>
+</div>
+{subtemplate footer}

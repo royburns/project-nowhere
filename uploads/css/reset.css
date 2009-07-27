@@ -1,0 +1,40 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background:  #FAFAF8 url( '../img/bg_sky.jpg') repeat-y;
+	font-size: 12px;
+	font-family:Verdana, "Lucida Grande", "Lucida Sans", sans;
+	line-height: 150%;
+}
+
+/* CSS RESET */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,select,textarea,p,blockquote,th,td {
+	margin: 0;
+	padding: 0;
+}
+input, select { vertical-align: baseline; }
+textarea { font-family: "Lucida Grande", Arial, Helvetica, Verdana, sans-serif; }
+input[type=text],input[type=password],textarea { background: #fff; color: #000; font-size: 12px; }
+label { cursor:pointer; }
+table { border-collapse: collapse; border-spacing: 0; font-size: 100%;}
+fieldset,img { border: 0; }
+address,caption,cite,code,dfn,em,th,var { font-style: normal; font-weight: normal; }
+strong { font-weight: bold; font-style: normal; }
+em { font-weight: normal; font-style: italic; }
+ul { list-style: none; }
+/* BASE CSS */
+
+/* nice boat! */
+.clear { clear:both; line-height:0; font-size:0; }
+.clearit:after{ content:"."; display:block; height:0; clear:both; visibility:hidden; }
+.clearit { zoom:1; }
+.rr { float:right; }
+.ll { float:left; }
+.empty { height: 20px; }
+
+/* links */
+a:link, a:active, a:visited { text-decoration: none; color: #2786C2; }
+a:hover { text-decoration: none; color: #559C2C; }
+
+/* MISC */
+hr.board{ height: 1px; background-color: #EEE; border: 0; color: #EEE; }

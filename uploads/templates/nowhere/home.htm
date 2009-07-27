@@ -1,0 +1,21 @@
+{subtemplate header}
+
+<div class="columns clearit">
+    <div id="columnHome">
+        <div id="bean_top"></div>        
+        <ul id="status_list">
+        <!--{if $nw_uid}-->
+         <li id="UpdateStatus" class="odd"><div class="content"><form id="SayFrom" method="post" action="{NWDIR}/update" name="SayFrom">
+        <textarea id="SayInput" onkeydown="seditor_ctlent(event,'SayFrom');" onkeyup="checkTsukkomiInput('SayInput', 'TsukkomiStatus');" name="status_input" cols="45" rows="2"></textarea>
+<div id="TsukkomiStatus" class="ll">
+<small class="grey">还可以输入140 字</small>
+</div><div id="submitAjax"><input class="inputBtn" type="submit" name="submit" value="{lang update}" /></div>
+        </form></div></li>
+        <!--{/if}-->
+        {subtemplate status_list}
+        <li id="more_status"></li>
+        </ul>
+
+    </div>
+</div>
+{subtemplate footer}
