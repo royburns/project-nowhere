@@ -1,0 +1,10 @@
+<!--{loop $status['item_list'] $item}-->
+<!--{eval $i++;}-->
+<!--{if $i<=$limit}-->
+<!--{eval $item['stt_dateline']= GlobalCore::make_descriptive_time($item['stt_dateline']);}-->
+document.writeln("<p><span style='color: " + nowhere_color_prefix + ";'>" + nowhere_prefix + "</span> $item['stt_status'] <small style='font-size: 11px; color: " + nowhere_color_time + ";'>@$item['stt_dateline']</small></p>");
+<!--{/if}-->
+<!--{/loop}-->
+document.writeln("<small style='font-size: 11px; color: " + nowhere_color_time + ";'>via <a href='http://$_SERVER[HTTP_HOST]{NWDIR}' target='_blank'>$sitename</a></small>");
+
+

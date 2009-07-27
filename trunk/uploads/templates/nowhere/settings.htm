@@ -1,0 +1,48 @@
+{subtemplate header}
+
+<div class="columns clearit">
+<div id="columnSingle">
+
+	<h2 class="title">/ {lang settings}</h2>
+	<form name="set" method="post" action="{NWDIR}/settings" enctype="multipart/form-data">
+    <div class="settings">
+        <ul>
+            <li class="cat"><span>基本设置</span></li>
+            <!--{loop $basic_settings $key $value}-->
+            <!--{eval $settings[$key] = GlobalCore::nwHtmlspecialchars($settings[$key]);}-->
+            <li><label class="title" for="$key">$value</label>
+            <input id="$key" class="inputtext long" type="text" name="$key" maxlength="50" value="$settings[$key]" />
+            </li>
+            <!--{/loop}-->
+            <li class="cat"><span>个人设置</span></li>
+            <li><label class="title" for="nickname">用户昵称</label>
+            <input id="nickname" class="inputtext long" type="text" name="nickname" maxlength="50" value="$nw_nick"/>
+            </li>
+            <li><label class="title" for="avatar">头像</label>
+            <input id="avatar" class="inputtext long" type="text" name="avatar" maxlength="50" value="$nw_avatar"/>
+            </li>
+            <li class="cat"><span>我的网络应用</span><br />只需在输入框里填写对应用户名(username)，程序会自动在首页添加小图标</li>
+            <!--{loop $webservice_settings $key $value}-->
+            <!--{eval $value = explode('|',$value);}-->
+            <li><label class="title" for="$key">$value[0]</label>
+            <input id="$key" class="inputtext long" type="text" name="$key" maxlength="50" value="$settings[$key]"/>
+            </li>
+             <!--{/loop}-->
+            <li class="cat"><span>安全设置</span></li>
+            <li><label class="title" for="password_old">原密码</label>
+            <input id="password_old" class="inputtext long" type="password" name="password_old" maxlength="50" autocomplete="off" />
+            </li>
+            <li><label class="title" for="password_new">新密码</label>
+            <input id="password_new" class="inputtext long" type="password" name="password_new" maxlength="50" autocomplete="off" />
+            </li>
+            <li><label class="title" for="password_new2">请再输入一次新密码</label>
+            <input id="password_new2" class="inputtext long" type="password" name="password_new2" maxlength="50" autocomplete="off" />
+            </li>
+            <li><input class="inputBtn" type="submit" name="submit" value="{lang update}" /></li>
+        </ul>
+    </div>
+    </form>
+</div>
+</div>
+
+{subtemplate footer}

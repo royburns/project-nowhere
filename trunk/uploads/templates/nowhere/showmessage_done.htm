@@ -1,0 +1,20 @@
+{subtemplate header}
+
+<div class="columns clearit">
+<div id="columnHome">
+
+	<h2 class="title">/ {lang showmessage}</h2>
+	<div class="error_info" >
+	<p>$show_message</p>
+	<!--{if $url_forward}-->
+		<br /><a href="$url_forward" class="chiiBtn"><span>{lang message_forward}</span></a>
+	<!--{elseif stristr($show_message, '{lang return}')}-->
+		<br /><a href="javascript:history.back()"class="chiiBtn"><span>{lang message_go_back}</span></a>
+	<!--{/if}-->
+	</div>
+
+
+</div>
+</div>
+
+{subtemplate footer}

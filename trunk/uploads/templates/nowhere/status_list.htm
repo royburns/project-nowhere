@@ -1,0 +1,24 @@
+<!--{loop $status['item_list'] $item}-->
+<!--{eval $item['stt_dateline']= GlobalCore::make_descriptive_time($item['stt_dateline']);}-->
+<!--{if $nw_uid}-->
+    <!--{eval $item['bg'] = $bg = isset($bg) && $bg == 'even' ? 'odd' : 'even';}-->
+<!--{else}-->
+    <!--{eval $item['bg'] = $bg = isset($bg) && $bg == 'odd' ? 'even' : 'odd';}-->
+<!--{/if}-->
+<li id="status_$item['stt_id']" class="status_item $item['bg']"><div class="content"><p>$item['stt_status']</p><span class="tip">$item['stt_dateline'] via web</span><!--{if $nw_uid}--><a id="del_$item['stt_id']" href="{NWDIR}/erase/status/$item['stt_id']" class="status_del">del</a><!--{/if}--></div>
+</li>
+<!--{/loop}-->
+<li id="pager_{$status['cur_page']}" class="even pager">$status['multipage']</li>
+<!--{if $status['cur_page']==1}-->
+<li id="ws" class="status_item odd">
+    <div class="content"><p>
+            <small class="grey ll">Find me</small>
+            <!--{loop $webservice_settings $key $value}-->
+            <!--{if $nowhere_settings[$key]!=''}-->
+            <!--{eval $value = explode('|',$value);}-->
+            <!--{eval $link = sprintf($value[1],$nowhere_settings[$key]);}-->
+            <a href="$link" target="_blank"><img src="{NWDIR}/img/ico/{$key}.gif" /></a>
+            <!--{/if}-->
+             <!--{/loop}--></p></div>
+</li>
+<!--{/if}-->

@@ -1,0 +1,25 @@
+{subtemplate header}
+
+<div class="columns clearit">
+<div id="columnSingle">
+
+	<h2 class="title">/ {lang output}</h2>
+
+    <div class="settings">
+        <ul>
+            <li class="cat"><span>JS输出</span></li>
+            <li>
+            <textarea class="quick"><script type="text/javascript">
+nowhere_prefix = "说:";
+nowhere_color_prefix = "#999";
+nowhere_color_time = "#999";
+</script>
+<script type="text/javascript" src="http://$_SERVER[HTTP_HOST]{NWDIR}/ojs?limit=1"></script></textarea>
+<br />JS输出方式最多可以输出16条状态更新</li>
+        </ul>
+    </div>
+
+</div>
+</div>
+
+{subtemplate footer}
